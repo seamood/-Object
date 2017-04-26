@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="Generator" content="Sublime Text3">
+    <meta name="Author" content="深山一枯柴">
+    <meta name="website" content="http://www.lihui-v.top">
+    <meta name="Description" content="马不停蹄的🐌!">
+   <style type="text/css">
+    #box{
+    	width: 640px;
+    	height: 960px;
+    	background-color: pink;
+    	overflow: hidden;
+    	margin: 0 auto ;
+    }
+    .sub_div{
+    	width: 100%;
+    	height: 100px;
+    	border-bottom:1px solid #ccc;
+    	background-color: yellow; 
+    	position: relative;
+    }
+    .sub_img{
+    	width: 50px;
+    	height: 50px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        left: 20px;
+    }
+   </style>
+    <script type="text/javascript">
+	    var date=[];
+	    function  fun(shuju){
+	    	date=shuju.data.list;
+	    	console.log(date);
+	    }
+	    
+        window.onload=function  () {
+    	var box=document.getElementById('box');
+    	for(i=0;i<date.length;i++){
+        	var sub_div=document.createElement('div');
+        	sub_div.className="sub_div";
+        	box.appendChild(sub_div);
+        	var img=document.createElement("img");
+            img.className="sub_img";
+            img.src=date[i].m_image_url
+        	sub_div.appendChild(img);
+        }
+        }
+    </script> 
+    <script type="text/javascript" src="xian.json"></script>
+    
+</head>
+<body>
+<div id="box">
+	
+</div>
+</body>
+</html>
